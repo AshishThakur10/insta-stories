@@ -1,13 +1,24 @@
 
 @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDg3ZTIzZDdkZmY1MDAyZDBmMzUyZGEiLCJpYXQiOjE2MTk1MTkzMzB9.hvqBDma0Sr1WQbI14UG1xAY9qd2onTLbosAb1_VLKgc
 
-POST http://localhost:8080/signup HTTP/1.1
+POST http://insta-stories.herokuapp.com/signup HTTP/1.1
    content-type: application/json
 
 {
-    "name": "sample",
-    "email": "send1@gmail.com",
-    "password": "ashishthakur"
+    "name": "test",
+    "email": "test1@gmail.com",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:4000/signup HTTP/1.1
+   content-type: application/json
+
+{
+    "name": "test2",
+    "email": "test11@gmail.com",
+    "password": "1234"
 }
 
 ###
@@ -34,6 +45,17 @@ POST http://localhost:8080/creatstories
 {
     "title": "test title",
     "body": "ashishthakur"
+}
+
+###
+
+POST http://localhost:4000/postwork
+   Content-Type: application/json
+
+{
+   "title": "test title",
+   "description": "ashishthakur",
+   "category":"work categoty"
 }
 
 ###
