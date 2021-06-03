@@ -20,6 +20,7 @@ mongoose.connect('mongodb+srv://Ash1:Ash1@cluster0.pbef3.mongodb.net/myFirstData
 
 require('./models/user')
 require('./models/stories')
+require('./models/work')
 
 app.get('/', (req,res)=>{
     res.send('home page')
@@ -28,17 +29,9 @@ app.get('/', (req,res)=>{
 app.use(express.json())
 app.use(require('./routes/auth'));
 app.use(require('./routes/stories'));
+app.use(require('./routes/work'));
 
 app.use(require('./routes/user'));
-
-
-
-
-
-
-
-
-
 
 
 app.listen(process.env.PORT || 4000);
