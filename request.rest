@@ -53,9 +53,12 @@ POST http://localhost:4000/postwork
    Content-Type: application/json
 
 {
-   "title": "test title",
-   "description": "ashishthakur",
-   "category":"work categoty"
+   "title": "test title2",
+   "description": "ashishthakur2",
+   "category":"work categoty2",
+   "vaccinated":"yes",
+   "amount":"10rs"
+   
 }
 
 ###
@@ -68,7 +71,7 @@ POST https://insta-stories.herokuapp.com/postwork
    "description": "hi i want to install window 10 in my pc",
    "category":"Tech",
    "vaccinated":"yes",
-   "amount":"10rs",
+   "amount":"10rs"
 }
 
 

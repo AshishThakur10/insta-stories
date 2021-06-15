@@ -17,7 +17,7 @@ router.get('/allwork',(req,res)=>{
 
 //Routes for posting works details
 router.post('/postwork',(req,res)=>{
-    const {title,description,category} =req.body
+    const {title,description,category,vaccinated,amount} =req.body
     if(!title || !description){
         return res.status(422).json({error:"enter all the fields"})
     }
