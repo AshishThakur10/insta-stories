@@ -15,6 +15,14 @@ const workSchema = new mongoose.Schema(
         type:String,
         default:"requirement"
     },
+    vaccinated: {
+        type:String,
+        default:"yes"
+    },
+    amount: {
+        type:String,
+        default:"10rs"
+    },
     postedBy:{
         type:ObjectId,
         ref:"User"

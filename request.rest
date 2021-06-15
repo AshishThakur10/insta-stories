@@ -60,6 +60,20 @@ POST http://localhost:4000/postwork
 
 ###
 
+POST https://insta-stories.herokuapp.com/postwork
+   Content-Type: application/json
+
+{
+   "title": "computer repaire",
+   "description": "hi i want to install window 10 in my pc",
+   "category":"Tech",
+   "vaccinated":"yes",
+   "amount":"10rs",
+}
+
+
+###
+
 GET http://localhost:8080/allstories HTTP/1.1
 
 

@@ -26,6 +26,8 @@ router.post('/postwork',(req,res)=>{
         title,
         description,
         category,
+        vaccinated,
+        amount,
         postedBy: req.user
     })
     work.save().then(result=>{
