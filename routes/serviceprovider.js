@@ -2,7 +2,7 @@
 const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
-const Stories = mongoose.model("Serviceprovider")
+const Serviceprovider = mongoose.model("Serviceprovider")
 
 router.get('/allserviceprovider',(req,res)=>{
     Serviceprovider.find()
@@ -21,7 +21,6 @@ router.post('/creatserviceprovider',(req,res)=>{
     if(!name || !email){
         return res.status(422).json({error:"enter all the fields"})
     }
-    req.user.password = undefined
     const serviceprovider = new Serviceprovider({
         name,
         username,
