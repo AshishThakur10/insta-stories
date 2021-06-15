@@ -49,6 +49,17 @@ router.get('/mywork',(req,res)=>{
     })
 })
 
+router.get('/allworks',(req,res)=>{
+    Stories.find()
+    .populate("postedBy","_id name")
+    .then(stories =>{
+        res.json({stories})
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+})
+
 
 
 
