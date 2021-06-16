@@ -28,7 +28,6 @@ app.get('/', (req,res)=>{
 })
 
 app.use(express.json())
-app.use(require('./routes/auth'));
 app.use(require('./routes/stories'));
 app.use(require('./routes/work'));
 app.use(require('./routes/serviceprovider'));
