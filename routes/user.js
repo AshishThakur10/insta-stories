@@ -13,4 +13,15 @@ router.post ("/create_user", async (req, res) =>{
     }
     });
 
+router.get('/all_user',(req,res)=>{
+     User.find()
+    .populate("postedBy","_id name")
+    .then(user =>{
+         res.json({user})
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+    })
+
 module.exports = router;
