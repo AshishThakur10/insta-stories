@@ -7,7 +7,7 @@ const Serviceprovider = mongoose.model("Serviceprovider")
 router.get('/allserviceprovider',(req,res)=>{
     Serviceprovider.find()
     .populate("postedBy","_id name")
-    .then(stories =>{
+    .then(serviceprovider =>{
         res.json({serviceprovider})
     })
     .catch(err=>{

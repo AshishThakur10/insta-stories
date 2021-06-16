@@ -84,6 +84,12 @@ GET https://insta-stories.herokuapp.com/allwork HTTP/1.1
 GET http://localhost:4000/all_user HTTP/1.1
 
 
+###
+GET http://localhost:4000/allserviceprovider HTTP/1.1
+
+###
+
+GET https://insta-stories.herokuapp.com/allserviceprovider HTTP/1.1
 
 ###
 
