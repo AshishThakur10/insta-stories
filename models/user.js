@@ -4,16 +4,28 @@ const userSchema = new mongoose.Schema(
     {
     name : {
         type: String,
-        required: true
+        default:"name"
         },
-    email : {
+    location : {
         type: String,
-        required: true
+        default:"location"
         },
-    password : {
+    vaccinated : {
         type: String,
-        required: true
-        }
+        default:"vaccinated"
+        },
+    categoriesAdded : {
+        type: String,
+        default:"categories Added"
+    },
+    workposted:{
+        type: String,
+        default:"workposted" 
+    },
+    workaccomplished : {
+        type: String,
+        default:"work accomplished"
+    }
     }
 );
 module.exports = mongoose.model("User", userSchema);
