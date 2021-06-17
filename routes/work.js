@@ -15,6 +15,17 @@ router.get('/allwork',(req,res)=>{
     })
 })
 
+router.get('/mywork',(req,res)=>{
+    Work.findone()
+    .populate("postedBy","_id name")
+    .then(work =>{
+        res.json({work})
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+})
+
 //Routes for posting works details
 router.post('/postwork',(req,res)=>{
     const {title,description,category,vaccinated,amount} =req.body
@@ -39,7 +50,7 @@ router.post('/postwork',(req,res)=>{
 })
 
 router.get('/mywork',(req,res)=>{
-    Work.find({postedBy:req.user._id})
+    Work.find({postedBy:req._id})
     .populate("postedBy","_id name")
     .then(mywork=>{
         res.json({mywork})
@@ -60,6 +71,12 @@ router.get('/allworks',(req,res)=>{
     })
 })
 
+
+router.get('/mywork/:id',(req,res)=>{
+    User.findOne({_id:req.params.id}).then((mywork)=>{
+        res.send(mywork)
+    })
+})
 
 
 
