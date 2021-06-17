@@ -1,9 +1,11 @@
 const express = require('express');
+var cors = require('cors')
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const app = express();
 
+app.use(cors())
 app.use(bodyParser.json());
 
 mongoose.connect('mongodb+srv://Ash1:Ash1@cluster0.pbef3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
