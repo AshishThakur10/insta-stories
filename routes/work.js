@@ -73,7 +73,7 @@ router.get('/allworks',(req,res)=>{
 
 
 router.get('/mywork/:id',(req,res)=>{
-    User.findOne({_id:req.params.id}).then((mywork)=>{
+    User.findById({_id:req.params.id}).then((mywork)=>{
         res.send(mywork)
     })
 })
