@@ -67,11 +67,11 @@ POST https://insta-stories.herokuapp.com/postwork
    Content-Type: application/json
 
 {
-   "title": "lappy",
+   "name": "computer ",
    "description": "hi i want to install window xp  in my pc",
    "category":"Tech",
    "vaccinated":"yes",
-   "amount":"300rs"
+   "amount":"300"
 } 
 
 
@@ -106,19 +106,19 @@ Authorization: Bearer{{token}}
 
 ###
 
-POST  http://localhost:4000/creatserviceprovider 
+POST  https://insta-stories.herokuapp.com/creatserviceprovider 
       Content-Type: application/json
 
 {
-"name": "Leanne Graham",
+"name": "Rahul",
 
-"username": "Bret",
+"username": "Bret Rahul",
 
-"vaccinated":"true",
+"vaccinated":"no",
 
 "skill":"Mobile Screen Replace",
 
-"picture": "https://hdqwalls.com/wallpap",
+"picture": "",
 
 "email": "Sincere@april.biz",
 

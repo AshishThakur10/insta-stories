@@ -28,13 +28,13 @@ router.get('/mywork',(req,res)=>{
 
 //Routes for posting works details
 router.post('/postwork',(req,res)=>{
-    const {title,description,category,vaccinated,amount} =req.body
-    if(!title || !description){
+    const {name,description,category,vaccinated,amount} =req.body
+    if(!description){
         return res.status(422).json({error:"enter all the fields"})
     }
     // req.user.password = undefined
     const work = new Work({   //adding a new work post to the data base
-        title,
+        name,
         description,
         category,
         vaccinated,
