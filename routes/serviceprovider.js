@@ -44,6 +44,15 @@ router.post('/creatserviceprovider',(req,res)=>{
 })
 
 
-
+router.get('/serviceprovider/:id',function(req,res){
+    Serviceprovider.findById(req.params.id)
+    .then(doc =>{
+        if(!doc){return res.status(404).end();}
+        return res.status(200).json(doc);
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+})
 
 module.exports = router
