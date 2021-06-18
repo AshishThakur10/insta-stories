@@ -11,17 +11,20 @@ const workSchema = new mongoose.Schema(
         type: String,
         default:"discription"
         },
+    picture : {
+        type: String,
+        },
     category: {
         type:String,
         default:"requirement"
     },
     vaccinated: {
         type:String,
-        default:"yes"
+        default:"no"
     },
     amount: {
         type:String,
-        default:"10rs"
+        default:"50"
     },
     postedBy:{
         type:ObjectId,
