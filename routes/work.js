@@ -72,12 +72,16 @@ router.get('/allworks',(req,res)=>{
 })
 
 
-router.get('/mywork/:id',(req,res)=>{
-    User.findById({_id:req.params.id}).then((mywork)=>{
-        res.send(mywork)
+router.get('/work/:id',function(req,res){
+    Work.findById(req.params.id)
+    .then(doc =>{
+        if(!doc){return res.status(404).end();}
+        return res.status(200).json(doc);
+    })
+    .catch(err=>{
+        console.log(err)
     })
 })
-
 
 
 
