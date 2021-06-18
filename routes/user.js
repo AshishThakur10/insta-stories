@@ -24,4 +24,15 @@ router.get('/all_user',(req,res)=>{
     })
     })
 
+router.get('/user/:id',function(req,res){
+    User.findById(req.params.id)
+    .then(doc =>{
+        if(!doc){return res.status(404).end();}
+        return res.status(200).json(doc);
+    })
+    .catch(err=>{
+        console.log(err)
+    })
+})
+
 module.exports = router;
