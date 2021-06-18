@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema(
         },
     vaccinated : {
         type: String,
-        default:"vaccinated"
+        default:"no"
         },
     }
 );

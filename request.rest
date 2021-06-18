@@ -169,3 +169,8 @@ GET https://insta-stories.herokuapp.com/user/6087e23d7dff5002d0f352da
 ###
 GET https://insta-stories.herokuapp.com/work/60b91ef47d04330eac387ffc HTTP/1.1
     Content-Type: application/json
+   
+###
+
+GET https://insta-stories.herokuapp.com/serviceprovider/60c8fd75b4b27b1de8e01dd9 HTTP/1.1
+    Content-Type: application/json

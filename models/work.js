@@ -3,7 +3,7 @@ const {ObjectId} = mongoose.Schema.Types
 
 const workSchema = new mongoose.Schema(
     {
-    title : {
+    name : {
         type: String,
         default:"title"
         },
@@ -29,6 +29,9 @@ const workSchema = new mongoose.Schema(
     postedBy:{
         type:ObjectId,
         ref:"User"
+    },
+    email:{
+        type:String
     }
     }
 );
